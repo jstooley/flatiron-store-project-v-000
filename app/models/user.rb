@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
     has_one :current_cart, class_name: "Cart"
 
     def current_user
+      User.find_by(id: session[:user_id])
     end
 end
