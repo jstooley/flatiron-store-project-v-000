@@ -12,11 +12,13 @@ class User < ActiveRecord::Base
     binding.pry
     User.find_by(id: session[:user_id])
   end
+
   def create_current_cart
     cart.create
     current_user.current_cart_id = new_cart.id
     save
   end
+  
   def remove_cart
     self.current_cart_id = nil
     save
