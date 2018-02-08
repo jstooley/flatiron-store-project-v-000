@@ -3,6 +3,5 @@ class Cart < ActiveRecord::Base
   has_many :line_items
   has_many :items, through: :line_items
 
-  def current_cart
-  end
+  
 end
