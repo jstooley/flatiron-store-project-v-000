@@ -3,6 +3,7 @@ class CreateLineItems < ActiveRecord::Migration
     create_table :line_items do |t|
       t.integr :quantity. default: 1
       t.integer :cart_id
+      t.integer :item_id
     end
   end
 end
