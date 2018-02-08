@@ -12,10 +12,10 @@ class User < ActiveRecord::Base
     end
 
     def create_current_cart
-    new_cart = carts.create
-    self.current_cart_id = new_cart.id
-    save
-  end
+      new_cart = carts.create
+      self.current_cart_id = new_cart.id
+      save
+    end
 
   def remove_cart
     self.current_cart_id = nil
