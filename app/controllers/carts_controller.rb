@@ -5,6 +5,7 @@ class CartsController < ApplicationController
 
   def checkout
     cart = Cart.find_by(id: params[:id])
+    cart.cgheckout
   end
 
 end
