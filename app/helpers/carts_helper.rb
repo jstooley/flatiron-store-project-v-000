@@ -9,6 +9,6 @@ module CartsHelper
   def create_current_cart
     new_cart = Cart.create
     current_user.current_cart_id = new_cart.id
-    save
+    new_cart.save
   end
 end
