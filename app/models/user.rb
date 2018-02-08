@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
     new_cart = carts.create
     self.current_cart_id = new_cart.id
     self.save
+    Cart.save
   end
 
   def remove_cart
