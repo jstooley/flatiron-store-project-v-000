@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 
-  def checkout
+  def show
   end
 
 end
