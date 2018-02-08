@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   end
   def show
     binding.pry
-    @category = Category.find_by(id: params(:id))
+    @category = Category.find_by(id: params[:id])
   end
 
 end
