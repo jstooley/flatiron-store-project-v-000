@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
     has_one :current_cart, class_name: "Cart"
 
 
-    def current_user
-      User.find_by(id: session[:user_id])
-    end
-    
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+
   def remove_cart
     self.current_cart_id = nil
     save
