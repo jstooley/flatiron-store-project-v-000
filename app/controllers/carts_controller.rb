@@ -12,6 +12,7 @@ class CartsController < ApplicationController
   private
 
   def set_cart
+    Cart.find_by(id: params[:id])
   end
 
 end
