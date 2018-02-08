@@ -5,7 +5,7 @@ class LineItemsController < ApplicationController
       if !current_user.current_cart
         current_user.create_current_cart
       end
-
+      binding.pry
       line_item = current_user.current_cart.add_item(params[:item_id])
 
       if line_item.save
@@ -13,7 +13,7 @@ class LineItemsController < ApplicationController
       else
         redirect_to store_path, {notice: 'Unable to add item'}
       end
-      
+
     else
       redirect_to new_user_session_path
     end
