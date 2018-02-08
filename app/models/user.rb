@@ -10,4 +10,15 @@ class User < ActiveRecord::Base
     def current_user
       User.find_by(id: session[:user_id])
     end
+
+    def create_current_cart
+    new_cart = carts.create
+    self.current_cart_id = new_cart.id
+    save
+  end
+
+  def remove_cart
+    self.current_cart_id = nil
+    save
+  end
 end
