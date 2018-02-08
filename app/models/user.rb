@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     User.find_by(id: session[:user_id])
   end
   def create_current_cart
-    new_cart = cart.create
+    cart.create
     current_user.current_cart_id = new_cart.id
     save
   end
