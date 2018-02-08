@@ -3,7 +3,7 @@ module CartsHelper
     if cart = Cart.find_by(id: current_user.current_cart_id)
       cart
     else
-      create_current_cart
+      cart = create_current_cart
     end
   end
 
