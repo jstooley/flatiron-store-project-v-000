@@ -9,6 +9,7 @@ class LineItemsController < ApplicationController
         redirect_to store_path, {notice: 'Unable to add item'}
       end
     else
+      redirect_to 'login_path'
     end
   end
 end
