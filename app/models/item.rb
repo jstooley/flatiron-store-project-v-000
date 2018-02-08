@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
-  belongs_to :order
+  has_many :line_items
   belongs_to :category
 end
