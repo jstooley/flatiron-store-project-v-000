@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   def create
     if logged_in?
-      binding.pry
+      
       if current_user.current_cart
         line_item = current_user.current_cart.add_item(params[:item_id])
       else
