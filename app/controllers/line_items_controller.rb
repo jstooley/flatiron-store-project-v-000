@@ -2,7 +2,7 @@ class LineItemsController < ApplicationController
   def create
     if logged_in?
 
-      if !current_user.current_cart
+      if current_user.current_cart
         current_user.create_current_cart
       end
       binding.pry
