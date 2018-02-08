@@ -6,6 +6,7 @@ class LineItemsController < ApplicationController
         line_item = current_user.current_cart.add_item(params[:item_id])
       else
         current_user.create_current_cart
+        line_item = current_user.current_cart.add_item(params[:item_id])
       end
 
 
