@@ -12,7 +12,7 @@ class CartsController < ApplicationController
   private
 
   def set_cart
-    Cart.find_by(id: params[:id])
+    Cart.find(params[:id])
   end
 
 end
