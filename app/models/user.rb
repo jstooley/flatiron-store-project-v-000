@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
     has_many :carts
     has_one :current_cart, class_name: "Cart"
 
+    def current_user
+      User.find_by(id: session[:user_id])
+    end
 
-  
 
   def create_current_cart
     new_cart = carts.create
