@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
 
   def create_current_cart
+    binding.pry
     new_cart = carts.create
     self.current_cart_id = new_cart.id
     self.save
